@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="calculator-container">
+      <div id="result-header">
+        <div id="cal-process">1,280 × 30 − 200</div>
+        <div id="cal-result">38400</div>
+      </div>
+      <div id="body-container">
+          <div id="number-col">
+              <div class="number-btn" v-for="(n, index) in 10">
+                {{ index }}
+              </div>
+              <div>00</div>
+              <div>.</div>
+          </div>
+          <div id="operator-col">
+            <div class="operator-btn">/</div>
+            <div class="operator-btn">x</div>
+            <div class="operator-btn">+</div>
+            <div class="operator-btn">-</div>
+          </div>
+      </div>
+      <div id="bottom-container">
+        <div class="bottom-item"> AC </div>
+        <div class="bottom-item"> Del </div>
+        <div class="bottom-item" id="equal-btn"> = </div>
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
